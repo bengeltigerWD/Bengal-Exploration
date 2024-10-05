@@ -7,27 +7,64 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .welcome-container {
             text-align: center;
-            margin-top: 50px;
-            background-color: #f4f4f4;
         }
-
         h1 {
-            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
-
-        .gcse-search {
+        .btn {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #ff80ab;
+        }
+        .search-container {
+            display: none;
             margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .gcse-search {
+            width: 100%;
         }
     </style>
+    <script async src="https://cse.google.com/cse.js?cx=726237bca0bf34b0a"></script>
 </head>
 <body>
 
-    <h1>Search with My Search</h1>
+    <div class="welcome-container" id="welcome">
+        <h1>Welcome to My Search</h1>
+        <button class="btn" onclick="showSearch()">Let's Go</button>
+    </div>
 
-    <!-- Google Custom Search Script -->
-    <script async src="https://cse.google.com/cse.js?cx=726237bca0bf34b0a"></script>
-    <div class="gcse-search"></div>
+    <div class="search-container" id="search">
+        <div class="gcse-search"></div>
+    </div>
 
+    <script>
+        function showSearch() {
+            document.getElementById('welcome').style.display = 'none';
+            document.getElementById('search').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
