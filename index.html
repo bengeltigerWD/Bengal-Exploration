@@ -4,35 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .gcse-search {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
+
     <h1>Search with My Search</h1>
-    <input type="text" id="query" placeholder="Type your search query...">
-    <button onclick="performSearch()">Search</button>
 
-    <div id="result"></div>
+    <!-- Google Custom Search Script -->
+    <script async src="https://cse.google.com/cse.js?cx=726237bca0bf34b0a"></script>
+    <div class="gcse-search"></div>
 
-    <script>
-        async function performSearch() {
-            const query = document.getElementById('query').value;
-            const apiKey = 'AIzaSyB5EsB_ZUDuEcYc14K9vox9p7QzOGPzaHM'; // New API Key
-            const url = `https://www.googleapis.com/customsearch/v1?q=${query}&key=${apiKey}`;
-
-            try {
-                const response = await fetch(url, {
-                    method: 'GET'
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to fetch data');
-                }
-
-                const data = await response.json();
-                document.getElementById('result').innerHTML = JSON.stringify(data, null, 2);
-            } catch (error) {
-                document.getElementById('result').innerHTML = 'Error: ' + error.message;
-            }
-        }
-    </script>
 </body>
 </html>
