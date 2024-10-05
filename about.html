@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Bengal</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .back-btn {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .back-btn:hover {
+            background-color: #ff80ab;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem; /* Responsive font size */
+            }
+            p {
+                font-size: 1rem; /* Smaller paragraph text */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>About Us</h1>
+    <p>Welcome to Bengal, your one-stop destination for finding anything you need online. Our mission is to provide the best search experience with a user-friendly interface and accurate results.</p>
+    <p>We are dedicated to continuously improving our services and making your experience as enjoyable as possible.</p>
+    <p>Thank you for choosing Bengal!</p>
+    
+    <button class="back-btn" onclick="window.history.back()">Back</button>
+
+</body>
+</html>
