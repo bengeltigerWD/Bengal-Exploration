@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Search</title>
+    <title>Bengal - My Search</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', serif;
             background-color: #1a1a1a;
             color: #fff;
             margin: 0;
@@ -16,13 +16,36 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-        }
-        .welcome-container {
             text-align: center;
         }
-        h1 {
-            font-size: 2.5rem;
+        .links {
             margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }
+        .link {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px; /* Space between buttons */
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove underline */
+        }
+        .link:hover {
+            background-color: #ff80ab;
+        }
+        .welcome-container {
+            transition: opacity 0.5s ease;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
         .btn {
             background-color: #ff4081;
@@ -33,6 +56,7 @@
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         .btn:hover {
             background-color: #ff80ab;
@@ -46,24 +70,60 @@
         .gcse-search {
             width: 100%;
         }
+        .back-btn {
+            margin-top: 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .back-btn:hover {
+            background-color: #ff80ab;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem; /* Responsive font size */
+            }
+            .link, .btn, .back-btn {
+                font-size: 0.9rem; /* Smaller button text */
+                padding: 8px 16px; /* Smaller button padding */
+            }
+        }
     </style>
     <script async src="https://cse.google.com/cse.js?cx=726237bca0bf34b0a"></script>
 </head>
 <body>
 
     <div class="welcome-container" id="welcome">
-        <h1>Welcome to My Search</h1>
+        <div class="links">
+            <a href="#about" class="link">About Us</a>
+            <a href="https://yourofficialsite.com" class="link" target="_blank">Our Official Site</a>
+            <a href="#contact" class="link">Contact Us</a>
+        </div>
+        <h1>Welcome to Bengal Search</h1>
         <button class="btn" onclick="showSearch()">Let's Go</button>
     </div>
 
     <div class="search-container" id="search">
+        <h2>Search Anything</h2>
         <div class="gcse-search"></div>
+        <button class="back-btn" onclick="goBack()">Back</button>
     </div>
 
     <script>
         function showSearch() {
             document.getElementById('welcome').style.display = 'none';
             document.getElementById('search').style.display = 'block';
+        }
+
+        function goBack() {
+            document.getElementById('search').style.display = 'none';
+            document.getElementById('welcome').style.display = 'flex';
         }
     </script>
 </body>
