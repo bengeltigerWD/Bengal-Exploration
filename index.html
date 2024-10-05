@@ -23,6 +23,8 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            position: relative; /* Ensure the links can be positioned */
+            z-index: 1; /* Keep links above other content */
         }
         .link {
             background-color: #ff4081;
@@ -46,6 +48,7 @@
             justify-content: center; /* Center content */
             align-items: center; /* Center content */
             height: 100vh; /* Maintain full height */
+            z-index: 0; /* Ensure it's below the links */
         }
         h1 {
             font-size: 3rem;
@@ -131,6 +134,7 @@
             <a href="https://bengeltigerwd.github.io/Bengal-Tiger-Website-Development-LTD/" class="link" target="_blank">Our Official Site</a>
             <a href="contact.html" class="link">Contact Us</a>
         </div>
+        <img src="image_2024-10-06_000933477.png" alt="Small Logo" class="logo" style="margin-bottom: 20px;"> <!-- Small logo above the welcome message -->
         <h1>Welcome to Bengal Search</h1>
         <button class="btn" onclick="showSearch()">Let's Go</button>
     </div>
