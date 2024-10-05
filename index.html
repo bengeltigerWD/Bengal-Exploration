@@ -41,6 +41,11 @@
         }
         .welcome-container {
             transition: opacity 0.5s ease;
+            display: flex; /* Ensure welcome page is always flex */
+            flex-direction: column; /* Maintain column layout */
+            justify-content: center; /* Center content */
+            align-items: center; /* Center content */
+            height: 100vh; /* Maintain full height */
         }
         h1 {
             font-size: 3rem;
@@ -66,6 +71,7 @@
             margin-top: 20px;
             width: 100%;
             max-width: 600px;
+            text-align: center; /* Center search text */
         }
         .gcse-search {
             width: 100%;
@@ -124,6 +130,9 @@
         function goBack() {
             document.getElementById('search').style.display = 'none';
             document.getElementById('welcome').style.display = 'flex'; // Keep welcome page in flex layout
+            // Reset the styling of the welcome page
+            document.body.style.height = '100vh'; // Maintain height
+            document.body.style.textAlign = 'center'; // Center text
         }
     </script>
 </body>
