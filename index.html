@@ -18,6 +18,18 @@
             height: 100vh;
             text-align: center;
         }
+        .header {
+            position: absolute;
+            top: 20px; /* Adjusts the position of the header */
+            left: 20px; /* Adjusts the position of the header */
+            display: flex;
+            align-items: center; /* Center the logo vertically */
+        }
+        .logo {
+            width: 50px; /* Logo width */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Space between logo and text */
+        }
         .links {
             margin-bottom: 20px;
             display: flex;
@@ -104,6 +116,11 @@
     <script async src="https://cse.google.com/cse.js?cx=725c16fd5627c4a8e"></script> <!-- Updated script source -->
 </head>
 <body>
+
+    <div class="header">
+        <img src="path_to_your_logo.png" alt="Logo" class="logo"> <!-- Replace with your logo path -->
+        <h2>About Us</h2>
+    </div>
 
     <div class="welcome-container" id="welcome">
         <div class="links">
