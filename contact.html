@@ -3,92 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Bengal</title>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles0.css">
     <style>
         body {
-            font-family: 'Times New Roman', serif;
-            background-color: #1a1a1a;
-            color: #fff;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+        }
+        .nav-buttons {
+            position: absolute;
+            top: 10px;
+            left: 20px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            gap: 10px;
+        }
+        .nav-buttons button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .nav-buttons button:hover {
+            background-color: #0056b3;
+        }
+        .contact-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 40px auto;
         }
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            text-align: center;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-        p {
-            font-size: 1.2rem;
-            line-height: 1.5;
-            max-width: 600px;
-            text-align: center;
+            font-size: 28px;
+            color: #333;
             margin-bottom: 20px;
         }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 600px;
+        .contact-item {
+            margin-bottom: 15px;
         }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
+        .contact-item a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
         }
-        input[type="submit"] {
-            background-color: #ff4081;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        .contact-item a:hover {
+            text-decoration: underline;
         }
-        input[type="submit"]:hover {
-            background-color: #ff80ab;
+        .contact-item img {
+            vertical-align: middle;
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
         }
-        .back-btn {
+        button {
             margin-top: 20px;
-            background-color: #ff4081;
-            color: white;
-            border: none;
             padding: 10px 20px;
-            font-size: 1rem;
+            font-size: 16px;
             cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
         }
-        .back-btn:hover {
-            background-color: #ff80ab;
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem; /* Responsive font size */
-            }
-            p {
-                font-size: 1rem; /* Smaller paragraph text */
-            }
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <button onclick="goToPage('index.html')">Home</button>
+        <button onclick="goBack()">Back</button>
+    </div>
 
-    <h1>Contact Us</h1>
-    <p>If you have any questions or feedback, please feel free to reach out to us using the form below.</p>
-    
-    <form action="https://formsubmit.co/your-email@example.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <input type="submit" value="Send Message">
-    </form>
+    <!-- Contact Information -->
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <div class="contact-item">
+            <a href="https://t.me/Ajmir100" target="_blank">
+                <img src="telegram.jpeg" alt="Telegram"> Telegram
+            </a>
+        </div>
+        <div class="contact-item">
+            <a href="https://www.youtube.com/@BengalTigerWebTech" target="_blank">
+                <img src="youtoub.png" alt="YouTube"> YouTube
+            </a>
+        </div>
+        <div class="contact-item">
+            <a href="https://www.facebook.com/profile.php?id=100083235735194&mibextid=JRoKGi" target="_blank">
+                <img src="facebook.png" alt="Facebook"> Facebook
+            </a>
+        </div>
+        <div class="contact-item">
+            <p>Mobile: <a href="tel:01938954599">01938954599</a></p>
+        </div>
+        <button onclick="goBack()">Back to Previous Page</button>
+    </div>
 
-    <button class="back-btn" onclick="window.history.back()">Back</button>
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
 
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <!-- Default Statcounter code for Team-Info
+https://bengeltigerwd.github.io/Team-Info/ -->
+<script type="text/javascript">
+var sc_project=13037300; 
+var sc_invisible=1; 
+var sc_security="ccb23b97"; 
+</script>
+<!-- Default Statcounter code for Team-Info
+https://bengeltigerwd.github.io/Team-Info/ -->
+<script type="text/javascript">
+var sc_project=13037502; 
+var sc_invisible=1; 
+var sc_security="dd3f9559"; 
+</script>
 </body>
 </html>
