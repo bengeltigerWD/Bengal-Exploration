@@ -18,7 +18,6 @@
             min-height: 100vh;
             text-align: center;
             overflow: hidden;
-            overflow-y: auto; /* Enable vertical scrolling */
         }
 
         .login {
@@ -48,7 +47,7 @@
 
         .search-container {
             margin-top: 20px;
-            width: 100%;
+            width: 90%;
             max-width: 600px;
             text-align: center;
         }
@@ -59,7 +58,8 @@
 
         .large-logo {
             margin: 20px 0;
-            width: 250px; /* Increased size for larger logo */
+            width: 100%; /* Full width on mobile */
+            max-width: 250px; /* Max width for larger screens */
             height: auto;
         }
 
@@ -69,7 +69,7 @@
             font-size: 1rem;
             text-align: left;
             padding-left: 10px;
-            width: 100%;
+            width: 90%; /* Adjusted for mobile */
             max-width: 600px;
             border: 1px solid #ff4081; /* Border color */
             border-radius: 5px; /* Rounded corners */
@@ -124,6 +124,7 @@
             justify-content: center;
             gap: 15px;
             align-items: center; /* Center align items */
+            flex-wrap: wrap; /* Wrap links if space is tight */
         }
 
         .footer-links a {
@@ -159,15 +160,12 @@
         }
 
         @media (max-width: 600px) {
-            h2 {
-                font-size: 2rem; /* Smaller heading on mobile */
-            }
             .btn {
                 font-size: 0.7rem; 
-                padding: 5px 10px;
+                padding: 5px 8px; /* Adjusted padding for mobile */
             }
             .large-logo {
-                width: 220px; /* Adjusted for smaller screens */
+                width: 100%; /* Full width for smaller screens */
             }
             .trending {
                 font-size: 0.9rem; /* Adjust font size for trending section */
@@ -184,7 +182,7 @@
 <body>
 
     <!-- Marquee for the running text -->
-    <div class="marquee">পিপিলিকা বন্ধ থাকায় বেঙ্গল এক্সপ্লোরেশন বর্তমানে বাংলাদেশের ১ মাত্র সার্চ ইঞ্জিন </div>
+    <div class="marquee">পিপিলিকা বন্ধ থাকায় বেঙ্গল এক্সপ্লোরেশন বর্তমানে বাংলাদেশের একমাত্র সার্চ ইঞ্জিন</div>
 
     <!-- Search Container -->
     <div class="search-container">
@@ -242,7 +240,7 @@
     <footer>
         <div class="footer-links">
             <a href="about.html" class="btn">About Us</a>
-            <a href="official_site.html" class="btn">Our Official Site</a>
+            <a href="https://bengeltigerwd.github.io/Bengal-Tiger-Website-Development-LTD/" class="btn">Our Official Site</a>
             <a href="contact.html" class="btn">Contact Us</a>
         </div>
     </footer>
