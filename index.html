@@ -149,14 +149,22 @@
             font-weight: bold;
             font-size: 1.2rem;
             white-space: nowrap;
-            animation: marquee 25s linear infinite;
+            display: flex;
+            align-items: center;
+            animation: marquee 30s linear infinite;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%; /* Ensure it starts off-screen */
+            animation: scroll 30s linear infinite;
         }
 
         @keyframes marquee {
-            0% {
+            from {
                 transform: translateX(100%);
             }
-            100% {
+            to {
                 transform: translateX(-100%);
             }
         }
@@ -185,7 +193,9 @@
 
     <!-- Marquee for the running text -->
     <div class="marquee-container">
-        পিপীলিকা বন্ধ থাকায় বেঙ্গল এক্সপ্লোরেশন বর্তমানে বাংলাদেশের একমাত্র সার্চ ইঞ্জিন। এটি আপনাকে সঠিক তথ্য খুঁজে পেতে সহায়তা করবে। এটি বর্তমানে বাংলা AI প্রকল্পে আসছে, যা আপনাকে আরও উন্নত এবং সঠিক তথ্য প্রদান করবে।
+        <div class="marquee-content">
+            পিপীলিকা বন্ধ থাকায় বেঙ্গল এক্সপ্লোরেশন বর্তমানে বাংলাদেশের একমাত্র সার্চ ইঞ্জিন। এটি আপনাকে সঠিক তথ্য খুঁজে পেতে সহায়তা করবে। এটি বর্তমানে বাংলা AI প্রকল্পে আসছে, যা আপনাকে আরও উন্নত এবং সঠিক তথ্য প্রদান করবে।
+        </div>
     </div>
 
     <!-- Search Container -->
@@ -197,7 +207,7 @@
 
     <!-- Trending searches section -->
     <div class="trending">
-        <h3>Today’s Trending Topics :</h3>
+        <h3>Today’s Trending Searches:</h3>
 
         <div class="item">
             <strong>1.</strong> <a href="#">বাংলাদেশের ভাইরাল ট্রেন্ড</a>
