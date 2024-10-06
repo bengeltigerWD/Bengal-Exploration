@@ -18,87 +18,109 @@
             height: 100vh;
             text-align: center;
         }
-        .welcome-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            z-index: 0; /* Ensure it's below the links */
+
+        /* Google login button */
+        .login {
+            position: absolute;
+            top: 10px;
+            right: 20px;
         }
-        .links {
-            margin-bottom: 20px; /* Margin below the links */
-        }
-        h1 {
-            font-size: 3rem;
-            margin: 10px 0; /* Reduced margin */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
+
         .btn {
             background-color: #ff4081;
             color: white;
             border: none;
-            padding: 5px 10px; /* Further reduced padding for smaller button appearance */
-            font-size: 0.8rem; /* Smaller font size */
+            padding: 5px 10px;
+            font-size: 0.8rem;
             cursor: pointer;
             border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for scaling */
-            margin: 5px; /* Reduced margin for spacing between buttons */
-            text-decoration: none; /* Remove underline */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin: 5px;
+            text-decoration: none; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .btn:hover {
             background-color: #ff80ab;
-            transform: scale(1.05); /* Slightly enlarge on hover */
+            transform: scale(1.05);
         }
+
         .search-container {
-            display: none;
             margin-top: 20px;
             width: 100%;
             max-width: 600px;
-            text-align: center; /* Center search text */
+            text-align: center;
         }
+
         .gcse-search {
             width: 100%;
         }
-        .back-btn {
-            margin-top: 20px;
-            background-color: #ff4081;
-            color: white;
-            border: none;
-            padding: 5px 10px; /* Reduced padding for back button */
-            font-size: 0.8rem; /* Smaller font size */
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        .back-btn:hover {
-            background-color: #ff80ab;
-        }
+
         .large-logo {
-            margin: 20px 0; /* Margin above and below the large logo */
-            width: 200px; /* Set width of the large logo */
-            height: auto; /* Maintain aspect ratio */
+            margin: 20px 0;
+            width: 200px; 
+            height: auto; 
         }
-        .small-logo {
-            width: 100px; /* Set width of the small logo */
-            height: auto; /* Maintain aspect ratio */
-            margin-bottom: 10px; /* Margin below the small logo */
+
+        /* Trending keywords section */
+        .trending {
+            margin-top: 20px;
+            font-size: 1rem;
         }
+
+        .trending p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .trending a {
+            color: #ff4081;
+            text-decoration: none;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .trending a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer section for About Us, Official Site, Contact Us */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 600px) {
             h1 {
-                font-size: 2.5rem; /* Responsive font size */
+                font-size: 2.5rem; 
             }
-            .btn, .back-btn {
-                font-size: 0.7rem; /* Even smaller button text for mobile */
-                padding: 5px 10px; /* Smaller button padding */
+            .btn {
+                font-size: 0.7rem; 
+                padding: 5px 10px;
             }
             .large-logo {
-                width: 150px; /* Smaller large logo for mobile */
-            }
-            .small-logo {
-                width: 80px; /* Smaller small logo for mobile */
+                width: 150px; 
             }
         }
     </style>
@@ -106,37 +128,36 @@
 </head>
 <body>
 
-    <div class="welcome-container" id="welcome">
-        <img src="image_2024-10-06_055343979.png" alt="Small Logo" class="small-logo"> <!-- Small logo on the welcome page -->
-        <div class="links">
-            <a href="about.html" class="btn">About Us</a>
-            <a href="official_site.html" class="btn">Our Official Site</a>
-            <a href="contact.html" class="btn">Contact Us</a>
-        </div>
-        <h1>Welcome to Bengal-Exploration</h1> <!-- Moved the welcome text below the links -->
-        <button class="btn" onclick="showSearch()">Let's Go</button>
+    <!-- Google Login Button -->
+    <div class="login">
+        <a href="https://accounts.google.com/o/oauth2/auth" class="btn">Login with Google</a>
     </div>
 
+    <!-- Search Container (directly shown) -->
     <div class="search-container">
         <img src="image_2024-10-06_055343979.png" alt="Large Logo" class="large-logo"> <!-- Large logo -->
         <h2>Search Anything</h2>
         <div class="gcse-search"></div>
-        <button class="back-btn" onclick="goBack()">Back</button>
     </div>
 
-    <script>
-        function showSearch() {
-            document.getElementById('welcome').style.display = 'none';
-            document.querySelector('.search-container').style.display = 'block';
-        }
+    <!-- Trending keywords section -->
+    <div class="trending">
+        <p>Trending:</p>
+        <a href="#">Technology</a>
+        <a href="#">AI</a>
+        <a href="#">Crypto</a>
+        <a href="#">Politics</a>
+        <a href="#">Sports</a>
+    </div>
 
-        function goBack() {
-            document.querySelector('.search-container').style.display = 'none';
-            document.getElementById('welcome').style.display = 'flex'; // Keep welcome page in flex layout
-            // Reset the styling of the welcome page
-            document.body.style.height = '100vh'; // Maintain height
-            document.body.style.textAlign = 'center'; // Center text
-        }
-    </script>
+    <!-- Footer section -->
+    <footer>
+        <div class="footer-links">
+            <a href="about.html" class="btn">About Us</a>
+            <a href="official_site.html" class="btn">Our Official Site</a>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+    </footer>
+
 </body>
 </html>
