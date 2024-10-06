@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bengal - My Search</title>
+    <title>Bengal Search</title>
     <style>
         body {
             font-family: 'Times New Roman', serif;
-            background-color: #000000; /* Dark black background */
+            background-color: #000000;
             color: #fff;
             margin: 0;
             padding: 0;
@@ -15,7 +15,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
         }
 
@@ -39,6 +39,7 @@
             text-decoration: none; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
+
         .btn:hover {
             background-color: #ff80ab;
             transform: scale(1.05);
@@ -57,26 +58,42 @@
 
         .large-logo {
             margin: 20px 0;
-            width: 200px; 
-            height: auto; 
+            width: 250px; /* Increased size for larger logo */
+            height: auto;
         }
 
         /* Trending keywords section */
         .trending {
             margin-top: 20px;
             font-size: 1rem;
+            text-align: left;
+            padding-left: 10px;
+            width: 100%;
+            max-width: 600px;
         }
 
-        .trending p {
-            font-size: 1.2rem;
+        .trending h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .trending .item {
             margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ff4081; /* Border color */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #222; /* Background color for item */
         }
 
-        .trending a {
+        .trending .item a {
             color: #ff4081;
             text-decoration: none;
-            margin-right: 10px;
             font-weight: bold;
+        }
+
+        .trending .item p {
+            color: #aaa;
+            margin: 2px 0;
         }
 
         .trending a:hover {
@@ -120,7 +137,7 @@
                 padding: 5px 10px;
             }
             .large-logo {
-                width: 150px; 
+                width: 220px; /* Adjusted for smaller screens */
             }
         }
     </style>
@@ -135,19 +152,44 @@
 
     <!-- Search Container (directly shown) -->
     <div class="search-container">
-        <img src="image_2024-10-06_055343979.png" alt="Large Logo" class="large-logo"> <!-- Large logo -->
+        <img src="image_2024-10-06_055343979.png" alt="Large Logo" class="large-logo">
         <h2>Search Anything</h2>
         <div class="gcse-search"></div>
     </div>
 
-    <!-- Trending keywords section -->
+    <!-- Trending searches section -->
     <div class="trending">
-        <p>Trending:</p>
-        <a href="#">Technology</a>
-        <a href="#">AI</a>
-        <a href="#">Crypto</a>
-        <a href="#">Politics</a>
-        <a href="#">Sports</a>
+        <h3>Today’s Trending Searches:</h3>
+
+        <div class="item">
+            <strong>1.</strong> <a href="#">World Cup 2024</a>
+            <p>Exciting matches and latest updates from the World Cup 2024 tournament.</p>
+        </div>
+
+        <div class="item">
+            <strong>2.</strong> <a href="#">Stock Market Trends</a>
+            <p>Current trends and analysis of the stock market fluctuations today.</p>
+        </div>
+
+        <div class="item">
+            <strong>3.</strong> <a href="#">New Smartphone Releases</a>
+            <p>Top features and reviews of the latest smartphone releases in 2024.</p>
+        </div>
+
+        <div class="item">
+            <strong>4.</strong> <a href="#">Global Climate Change</a>
+            <p>Latest reports and research on climate change and its global impact.</p>
+        </div>
+
+        <div class="item">
+            <strong>5.</strong> <a href="#">Latest in Tech News</a>
+            <p>Discover the latest innovations and news from the tech industry.</p>
+        </div>
+
+        <div class="item">
+            <strong>6.</strong> <a href="#">Hollywood Blockbusters</a>
+            <p>Check out the hottest blockbusters released this month in Hollywood.</p>
+        </div>
     </div>
 
     <!-- Footer section -->
