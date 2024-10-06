@@ -15,9 +15,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center; /* Center vertically */
             min-height: 100vh;
             text-align: center;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow: hidden;
         }
 
         .login {
@@ -28,10 +29,10 @@
 
         .btn {
             background-color: #ff4081;
-            color: white; /* Changed to white for better contrast */
+            color: white;
             border: none;
-            padding: 8px 15px; /* Increased padding */
-            font-size: 1rem; /* Increased font size */
+            padding: 8px 12px;
+            font-size: 1rem;
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.3s ease;
@@ -46,7 +47,7 @@
         }
 
         .search-container {
-            margin-top: 50px; /* Increased margin for better spacing */
+            margin-top: 20px;
             width: 90%;
             max-width: 600px;
             text-align: center;
@@ -65,7 +66,7 @@
 
         /* Trending keywords section */
         .trending {
-            margin-top: 30px; /* Increased margin for better spacing */
+            margin-top: 20px;
             font-size: 1rem;
             text-align: left;
             padding-left: 10px;
@@ -114,9 +115,9 @@
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 15px; /* Increased padding */
+            padding: 10px;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-            margin-top: 30px; /* Added margin to separate from trending section */
+            margin-top: 20px; /* Added margin to separate from trending section */
         }
 
         .footer-links {
@@ -162,7 +163,7 @@
         @media (max-width: 600px) {
             .btn {
                 font-size: 0.8rem; 
-                padding: 6px 10px; /* Adjusted padding for mobile */
+                padding: 5px 8px; /* Adjusted padding for mobile */
             }
             .large-logo {
                 width: 100%; /* Full width for smaller screens */
@@ -171,7 +172,7 @@
                 font-size: 0.9rem; /* Adjust font size for trending section */
             }
             .footer-links {
-                flex-direction: column; /* Stack links vertically on small screens */
+                flex-direction: row; /* Keep links in a single row */
                 gap: 10px; /* Adjust gap between links */
             }
         }
@@ -182,7 +183,7 @@
 <body>
 
     <!-- Marquee for the running text -->
-    <div class="marquee">পিপিলিকা বন্ধ থাকায় বেঙ্গল এক্সপ্লোরেশন বর্তমানে বাংলাদেশের একমাত্র সার্চ ইঞ্জিন</div>
+    <div class="marquee">পিপীলিকা বন্ধ থাকায় বেঙ্গল এক্সপ্লোরেশন বর্তমানে বাংলাদেশের একমাত্র সার্চ ইঞ্জিন</div>
 
     <!-- Search Container -->
     <div class="search-container">
