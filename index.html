@@ -14,10 +14,12 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Changed to flex-start to keep content at the top */
             align-items: center;
             min-height: 100vh;
             text-align: center;
+            overflow: hidden;
+            overflow-y: auto; /* Enable vertical scrolling */
         }
 
         /* Google login button */
@@ -71,19 +73,25 @@
             padding-left: 10px;
             width: 100%;
             max-width: 600px;
+            border: 1px solid #ff4081; /* Border color */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #222; /* Background color for trending section */
+            padding: 15px; /* Padding around trending items */
         }
 
         .trending h3 {
             font-size: 1.4rem;
             margin-bottom: 10px;
+            color: #ff4081; /* Heading color */
         }
 
         .trending .item {
-            margin: 10px 0;
+            margin: 5px 0; /* Adjusted for smaller items */
             padding: 10px;
             border: 1px solid #ff4081; /* Border color */
             border-radius: 5px; /* Rounded corners */
-            background-color: #222; /* Background color for item */
+            background-color: #333; /* Background color for item */
+            font-size: 0.9rem; /* Smaller font size for trending items */
         }
 
         .trending .item a {
@@ -103,14 +111,13 @@
 
         /* Footer section for About Us, Official Site, Contact Us */
         footer {
-            position: fixed;
-            bottom: 0;
             width: 100%;
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 20px; /* Added margin to separate from trending section */
         }
 
         .footer-links {
@@ -127,6 +134,28 @@
 
         .footer-links a:hover {
             text-decoration: underline;
+        }
+
+        .marquee {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            animation: marquee 15s linear infinite;
+            color: #ff4081; /* Color for marquee text */
+            font-weight: bold; /* Bold text for marquee */
+            font-size: 1.2rem; /* Font size for marquee text */
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
         }
 
         @media (max-width: 600px) {
@@ -147,7 +176,8 @@
 </head>
 <body>
 
-   
+    <!-- Marquee for the running text -->
+    <div class="marquee">পিপিলিকা বন্ধ থাকায় বেঙ্গল এক্সপ্লোরেশন বর্তমানে বাংলাদেশের একমাত্র সার্চ ইঞ্জিন</div>
 
     <!-- Search Container (directly shown) -->
     <div class="search-container">
@@ -161,33 +191,43 @@
         <h3>Today’s Trending Searches:</h3>
 
         <div class="item">
-            <strong>1.</strong> <a href="https://bengeltigerwd.github.io/Bengal-Exploration/index.html#gsc.tab=0&gsc.q=world%20cup%202024&gsc.sort=">World Cup 2024</a>
-            <p>Exciting matches and latest updates from the World Cup 2024 tournament.</p>
+            <strong>1.</strong> <a href="#">বাংলাদেশের ভাইরাল ট্রেন্ড</a>
+            <p>বর্তমান ভাইরাল ট্রেন্ড যা বাংলাদেশে চলছে।</p>
         </div>
 
         <div class="item">
-            <strong>2.</strong> <a href="#">Stock Market Trends</a>
-            <p>Current trends and analysis of the stock market fluctuations today.</p>
+            <strong>2.</strong> <a href="#">প্যালেস্টাইন-ইসরাইল হামলা</a>
+            <p>প্যালেস্টাইন ও ইসরাইলের মধ্যে চলমান সংঘাত এবং খবর।</p>
         </div>
 
         <div class="item">
-            <strong>3.</strong> <a href="#">New Smartphone Releases</a>
-            <p>Top features and reviews of the latest smartphone releases in 2024.</p>
+            <strong>3.</strong> <a href="#">World Economic Forum 2024</a>
+            <p>The latest discussions and insights from the World Economic Forum.</p>
         </div>
 
         <div class="item">
-            <strong>4.</strong> <a href="#">Global Climate Change</a>
-            <p>Latest reports and research on climate change and its global impact.</p>
+            <strong>4.</strong> <a href="#">Tech Innovations in 2024</a>
+            <p>Discover the latest technological innovations shaping the future.</p>
         </div>
 
         <div class="item">
-            <strong>5.</strong> <a href="#">Latest in Tech News</a>
-            <p>Discover the latest innovations and news from the tech industry.</p>
+            <strong>5.</strong> <a href="#">বিশ্ব পরিস্থিতি</a>
+            <p>বিশ্বের বর্তমান রাজনৈতিক ও অর্থনৈতিক পরিস্থিতি।</p>
         </div>
 
         <div class="item">
-            <strong>6.</strong> <a href="#">Hollywood Blockbusters</a>
-            <p>Check out the hottest blockbusters released this month in Hollywood.</p>
+            <strong>6.</strong> <a href="#">বঙ্গোপসাগর নিয়ে আলোচনা</a>
+            <p>বঙ্গোপসাগরে নতুন কিছু তথ্য।</p>
+        </div>
+
+        <div class="item">
+            <strong>7.</strong> <a href="#">দেশের উন্নয়ন প্রকল্প</a>
+            <p>নতুন উন্নয়ন প্রকল্পগুলো সম্পর্কে জানুন।</p>
+        </div>
+
+        <div class="item">
+            <strong>8.</strong> <a href="#">শিক্ষার নতুন দিগন্ত</a>
+            <p>শিক্ষার ক্ষেত্রে নতুন পরিবর্তনগুলি সম্পর্কে আলোচনা।</p>
         </div>
     </div>
 
