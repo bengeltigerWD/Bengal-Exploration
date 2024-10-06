@@ -17,7 +17,7 @@
             align-items: center;
             min-height: 100vh;
             text-align: center;
-            overflow: hidden;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .login {
@@ -28,10 +28,10 @@
 
         .btn {
             background-color: #ff4081;
-            color: red;
+            color: white; /* Changed to white for better contrast */
             border: none;
-            padding: 5px 10px;
-            font-size: 0.8rem;
+            padding: 8px 15px; /* Increased padding */
+            font-size: 1rem; /* Increased font size */
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.3s ease;
@@ -46,7 +46,7 @@
         }
 
         .search-container {
-            margin-top: 20px;
+            margin-top: 50px; /* Increased margin for better spacing */
             width: 90%;
             max-width: 600px;
             text-align: center;
@@ -65,7 +65,7 @@
 
         /* Trending keywords section */
         .trending {
-            margin-top: 20px;
+            margin-top: 30px; /* Increased margin for better spacing */
             font-size: 1rem;
             text-align: left;
             padding-left: 10px;
@@ -114,9 +114,9 @@
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 15px; /* Increased padding */
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-            margin-top: 20px; /* Added margin to separate from trending section */
+            margin-top: 30px; /* Added margin to separate from trending section */
         }
 
         .footer-links {
@@ -161,8 +161,8 @@
 
         @media (max-width: 600px) {
             .btn {
-                font-size: 0.7rem; 
-                padding: 5px 8px; /* Adjusted padding for mobile */
+                font-size: 0.8rem; 
+                padding: 6px 10px; /* Adjusted padding for mobile */
             }
             .large-logo {
                 width: 100%; /* Full width for smaller screens */
@@ -171,7 +171,7 @@
                 font-size: 0.9rem; /* Adjust font size for trending section */
             }
             .footer-links {
-                flex-direction: row; /* Keep links in a single row */
+                flex-direction: column; /* Stack links vertically on small screens */
                 gap: 10px; /* Adjust gap between links */
             }
         }
