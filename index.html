@@ -1,1 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengal Exploration - Search Anything</title>
+    <meta name="description" content="Explore the world of knowledge with Bengal Exploration. Search anything you desire!">
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #000000;
+            color: #ffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
 
+        .login {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .btn {
+            background-color: #ff4081;
+            color: red;
+            border: none;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin: 5px;
+            text-decoration: none; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #ff80ab;
+            transform: scale(1.05);
+        }
+
+        .search-container {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .gcse-search {
+            width: 100%;
+        }
+
+        .large-logo {
+            margin: 20px 0;
+            width: 250px; /* Increased size for larger logo */
+            height: auto;
+        }
+
+        /* Trending keywords section */
+        .trending {
+            margin-top: 20px;
+            font-size: 1rem;
+            text-align: left;
+            padding-left: 10px;
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid #ff4081; /* Border color */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #222; /* Background color for trending section */
+            padding: 15px; /* Padding around trending items */
+            box-sizing: border-box; /* Ensure padding is included in width */
+        }
+
+        .trending h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #ff4081; /* Heading color */
+        }
+
+        .trending .item {
+            margin: 5px 0; /* Adjusted for smaller items */
+            padding: 10px;
+            border: 1px solid #ff4081; /* Border color */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #333; /* Background color for item */
+            font-size: 0.9rem; /* Smaller font size for trending items */
+        }
+
+        .trending .item a {
+            color: #ff4081;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .trending .item p {
+            color: #aaa;
+            margin: 2px 0;
+        }
+
+        .trending a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer section for About Us, Official Site, Contact Us */
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 20px; /* Added margin to separate from trending section */
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            align-items: center; /* Center align items */
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .marquee {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            animation: marquee 15s linear infinite;
+            color: #ff4081; /* Color for marquee text */
+            font-weight: bold; /* Bold text for marquee */
+            font-size: 1.2rem; /* Font size for marquee text */
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 2rem; /* Smaller heading on mobile */
+            }
+            .btn {
+                font-size: 0.7rem; 
+                padding: 5px 10px;
+            }
+            .large-logo {
+                width: 220px; /* Adjusted for smaller screens */
+            }
+            .trending {
+                font-size: 0.9rem; /* Adjust font size for trending section */
+            }
+            .footer-links {
+                flex-direction: row; /* Keep links in a single row */
+                gap: 10px; /* Adjust gap between links */
+            }
+        }
+    </style>
+    <script async src="https://cse.google.com/cse.js?cx=725c16fd5627c4a8e"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+
+    <!-- Marquee for the running text -->
+    <div class="marquee">পিপিলিকা বন্ধ থাকায় বেঙ্গল এক্সপ্লোরেশন বর্তমানে বাংলাদেশের একমাত্র সার্চ ইঞ্জিন</div>
+
+    <!-- Search Container -->
+    <div class="search-container">
+        <img src="image_2024-10-06_055343979.png" alt="Large Logo" class="large-logo">
+        <h2>Search Anything</h2>
+        <div class="gcse-search"></div>
+    </div>
+
+    <!-- Trending searches section -->
+    <div class="trending">
+        <h3>Today’s Trending Searches:</h3>
+
+        <div class="item">
+            <strong>1.</strong> <a href="#">বাংলাদেশের ভাইরাল ট্রেন্ড</a>
+            <p>বর্তমান ভাইরাল ট্রেন্ড যা বাংলাদেশে চলছে।</p>
+        </div>
+
+        <div class="item">
+            <strong>2.</strong> <a href="#">প্যালেস্টাইন-ইসরাইল হামলা</a>
+            <p>প্যালেস্টাইন ও ইসরাইলের মধ্যে চলমান সংঘাত এবং খবর।</p>
+        </div>
+
+        <div class="item">
+            <strong>3.</strong> <a href="#">World Economic Forum 2024</a>
+            <p>The latest discussions and insights from the World Economic Forum.</p>
+        </div>
+
+        <div class="item">
+            <strong>4.</strong> <a href="#">Tech Innovations in 2024</a>
+            <p>Discover the latest technological innovations shaping the future.</p>
+        </div>
+
+        <div class="item">
+            <strong>5.</strong> <a href="#">বিশ্ব পরিস্থিতি</a>
+            <p>বিশ্বের বর্তমান রাজনৈতিক ও অর্থনৈতিক পরিস্থিতি।</p>
+        </div>
+
+        <div class="item">
+            <strong>6.</strong> <a href="#">বঙ্গোপসাগর নিয়ে আলোচনা</a>
+            <p>বঙ্গোপসাগরে নতুন কিছু তথ্য।</p>
+        </div>
+
+        <div class="item">
+            <strong>7.</strong> <a href="#">দেশের উন্নয়ন প্রকল্প</a>
+            <p>নতুন উন্নয়ন প্রকল্পগুলো সম্পর্কে জানুন।</p>
+        </div>
+
+        <div class="item">
+            <strong>8.</strong> <a href="#">শিক্ষার নতুন দিগন্ত</a>
+            <p>শিক্ষার ক্ষেত্রে নতুন পরিবর্তনগুলি সম্পর্কে আলোচনা।</p>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer-links">
+            <a href="about.html" class="btn">About Us</a>
+            <a href="official_site.html" class="btn">Our Official Site</a>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+    </footer>
+
+</body>
+</html>
