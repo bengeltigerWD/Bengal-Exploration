@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bengal Exploration - Explore the world of knowledge with Bengal Exploration. Search anything you desire!</title>
+    <title>Bengal Exploration - Search Anything</title>
     <meta name="description" content="Explore the world of knowledge with Bengal Exploration. Search anything you desire!">
     <style>
         body {
@@ -15,9 +15,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Align to start for scrolling */
+            justify-content: flex-start;
             min-height: 100vh;
             text-align: center;
+            overflow-x: hidden; /* Hide horizontal scroll */
             overflow-y: auto; /* Enable vertical scrolling */
         }
 
@@ -47,7 +48,7 @@
         }
 
         .search-container {
-            margin-top: 60px; /* Added top margin to accommodate marquee */
+            margin-top: 60px;
             width: 90%;
             max-width: 600px;
             text-align: center;
@@ -59,8 +60,8 @@
 
         .large-logo {
             margin: 20px 0;
-            width: 100%; /* Full width on mobile */
-            max-width: 250px; /* Max width for larger screens */
+            width: 100%;
+            max-width: 250px;
             height: auto;
         }
 
@@ -70,28 +71,28 @@
             font-size: 1rem;
             text-align: left;
             padding-left: 10px;
-            width: 90%; /* Adjusted for mobile */
+            width: 90%;
             max-width: 600px;
-            border: 1px solid #ff4081; /* Border color */
-            border-radius: 5px; /* Rounded corners */
-            background-color: #222; /* Background color for trending section */
-            padding: 15px; /* Padding around trending items */
-            box-sizing: border-box; /* Ensure padding is included in width */
+            border: 1px solid #ff4081;
+            border-radius: 5px;
+            background-color: #222;
+            padding: 15px;
+            box-sizing: border-box;
         }
 
         .trending h3 {
             font-size: 1.4rem;
             margin-bottom: 10px;
-            color: #ff4081; /* Heading color */
+            color: #ff4081;
         }
 
         .trending .item {
-            margin: 5px 0; /* Adjusted for smaller items */
+            margin: 5px 0;
             padding: 10px;
-            border: 1px solid #ff4081; /* Border color */
-            border-radius: 5px; /* Rounded corners */
-            background-color: #333; /* Background color for item */
-            font-size: 0.9rem; /* Smaller font size for trending items */
+            border: 1px solid #ff4081;
+            border-radius: 5px;
+            background-color: #333;
+            font-size: 0.9rem;
         }
 
         .trending .item a {
@@ -117,15 +118,15 @@
             text-align: center;
             padding: 10px;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-            margin-top: 20px; /* Added margin to separate from trending section */
+            margin-top: 20px;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 15px;
-            align-items: center; /* Center align items */
-            flex-wrap: wrap; /* Wrap links if space is tight */
+            align-items: center;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
@@ -145,10 +146,10 @@
             white-space: nowrap;
             overflow: hidden;
             box-sizing: border-box;
-            animation: marquee 15s linear infinite;
-            color: #ff4081; /* Color for marquee text */
-            font-weight: bold; /* Bold text for marquee */
-            font-size: 1.2rem; /* Font size for marquee text */
+            animation: marquee 20s linear infinite;
+            color: #ff4081;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
         @keyframes marquee {
@@ -163,17 +164,17 @@
         @media (max-width: 600px) {
             .btn {
                 font-size: 0.8rem; 
-                padding: 5px 8px; /* Adjusted padding for mobile */
+                padding: 5px 8px; 
             }
             .large-logo {
-                width: 100%; /* Full width for smaller screens */
+                width: 100%;
             }
             .trending {
-                font-size: 0.9rem; /* Adjust font size for trending section */
+                font-size: 0.9rem; 
             }
             .footer-links {
-                flex-direction: row; /* Keep links in a single row */
-                gap: 10px; /* Adjust gap between links */
+                flex-direction: row; 
+                gap: 10px; 
             }
         }
     </style>
@@ -183,7 +184,7 @@
 <body>
 
     <!-- Marquee for the running text -->
-    <div class="marquee">বেঙ্গল এক্সপ্লোরেশন বর্তমানে বাংলাদেশের একমাত্র সার্চ ইঞ্জিন</div>
+    <div class="marquee">পিপীলিকা বন্ধ থাকায় বেঙ্গল এক্সপ্লোরেশন বর্তমানে বাংলাদেশের একমাত্র সার্চ ইঞ্জিন। এটি আপনাকে সঠিক তথ্য খুঁজে পেতে সহায়তা করবে।</div>
 
     <!-- Search Container -->
     <div class="search-container">
